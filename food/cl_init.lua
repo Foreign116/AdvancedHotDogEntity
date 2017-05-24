@@ -3,8 +3,6 @@ include("shared.lua")
 function ENT:Initialize()
 self.csModel = ClientsideModel("models/food/hotdog.mdl")
 self.csModel:SetModelScale(3,0)
-self:DrawShadow(false)
-self:MarkShadowAsDirty()
 end
 
 function ENT:Draw()

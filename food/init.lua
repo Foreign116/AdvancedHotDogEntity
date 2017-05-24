@@ -28,8 +28,16 @@ function ENT:Initialize()
 	function ENT:StartTouch(ent)
 		if ent:IsPlayer() then
 			ent:ChatPrint("YUMMMMYYYY")
+			if ent:Health()<100 then
+				local healthtogive = 25
+				while ent:Health()<100 and healthtogive>0 do
+					ent:SetHealth(ent:Health()+1)
+					healthtogive = healthtogive - 1
+				end
+			end
 			self:Remove()
 		end
 
 
 	end
+
